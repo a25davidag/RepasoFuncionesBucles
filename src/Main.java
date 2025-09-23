@@ -4,11 +4,6 @@ public class Main {
     public static void main(String[] args) {
         // Ejercicio1
         Scanner sc = new Scanner(System.in);
-        System.out.println(" Introduce el numero de pista ");
-        System.out.print(" Pon el numero de pista ");
-        int pistas = sc.nextInt();
-        numeroPistas(pistas);
-        /*Scanner sc = new Scanner(System.in);
         int numeroPIstas;
 
         do {
@@ -24,7 +19,7 @@ public class Main {
             }
 
 
-        } while (numeroPIstas  != 0);*/
+        } while (numeroPIstas  != 0);
 
 
         //Ejercicio 2
@@ -42,8 +37,8 @@ public class Main {
     }//Ejercicio 1
         public static void numeroPistas(int x){
             do {
-                /*System.out.println(" Introduce el numero de pista ");
-                System.out.print(" Pon el numero de pista ");*/
+                System.out.println(" Introduce el numero de pista ");
+                System.out.print(" Pon el numero de pista ");
                 if (x >= 1 && x <= 5) {
                     System.out.println(" El aterrizaje es seguro");
                 } else if (x == 0) {
