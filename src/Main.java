@@ -77,7 +77,7 @@ public class Main {
             String mensaje = sp.nextLine();
             mensaejesPLaneta(destino, mensaje);
             }
-        }*/
+        }
         //Ejecicio 7
         Scanner sl = new Scanner(System.in);
         System.out.println(" EScribe los kilometros que quieres recorrer");
@@ -85,6 +85,19 @@ public class Main {
         System.out.println(" Tienes 500 litros ");
         int litros = 500;
 
+
+
+        //Ejercicio 8
+        Scanner sv = new Scanner(System.in);
+        System.out.println(" Escribe un punto de recorrido");
+        int puntoActual = sv.nextInt();
+        navegarPuntos(puntoActual);*/
+
+        //Ejercicio 9
+        Scanner sh = new Scanner(System.in);
+        System.out.println("Pon un nombre de emision");
+        String emision = sh.nextLine();
+        int numero = sh.nextInt();
 
 
 
@@ -144,11 +157,19 @@ public class Main {
             }
     }
     //Ejercicio 7
-    public static void calcularConsumo( double r, int l){
+   /* public static void calcularConsumo( double r, int l){
         if((l * 100)/r){System
-        }
-    }
+        }*/
 
+    public static void navegarPuntos(int x){
+        for(int i = 1; i <= 5; i++)
+            if(x % 2 == 0){
+                System.out.println("!Control de trayecto existoso");
+            }else{
+                System.out.println("!Control de trayecto no existoso");
+            }
+        System.out.println("Ruta completada");
+    }
 
 }
 
