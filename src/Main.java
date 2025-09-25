@@ -145,8 +145,7 @@ public class Main {
     }
     //Ejercicio 7
     public static void calcularConsumo( double r, int l){
-        if((l * 100)/r){
-
+        if((l * 100)/r){System
         }
     }
 
@@ -156,6 +155,47 @@ public class Main {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*public static void calcularConsumo() {
+    Scanner sc = new Scanner(System.in);
+    double kilometros, consumoKm, consumoTotal;
+    final double TANQUE = 500.0;
+
+    do {
+        System.out.print("Introduce los kilómetros recorridos: ");
+        kilometros = sc.nextDouble();
+
+        System.out.print("Introduce el consumo por km: ");
+        consumoKm = sc.nextDouble();
+
+        consumoTotal = kilometros * consumoKm;
+
+        if (consumoTotal <= TANQUE) {
+            double restante = TANQUE - consumoTotal;
+            System.out.println("Viaje completado. Combustible restante: " + restante + " litros");
+        } else {
+            System.out.println("Advertencia: Combustible insuficiente, se requiere recarga\n");
+        }
+
+    } while (consumoTotal > TANQUE); // Repite hasta que el viaje sea sostenible
+}
+
+public static void main(String[] args) {
+    calcularConsumo();
+}
+}*/
 
 
 
