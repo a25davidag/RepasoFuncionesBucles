@@ -1,3 +1,4 @@
+import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
@@ -95,13 +96,19 @@ public class Main {
 
         //Ejercicio 9
         Scanner sh = new Scanner(System.in);
-        System.out.println("Pon un nombre de emision");
-        String emision = sh.nextLine();
-        int numero = sh.nextInt();
 
-
-
-
+        //System.out.println("Pon un numero de emisión");
+        //int numero = sh.nextInt();
+        String emision;
+        while (true) {
+            System.out.println("Pon un nombre de emision (o escribe 'salir' para salir del sistema");
+            emision = sh.nextLine();
+            if (emision.equals("salir")) {
+                System.out.println("Program terminado");
+                break;
+            }
+        }System.out.println("hola");
+        generarCodigoMision(emision);
 
 
     }//Ejercicio 2
@@ -161,6 +168,8 @@ public class Main {
         if((l * 100)/r){System
         }*/
 
+
+    //Ejercicio 8
     public static void navegarPuntos(int x){
         for(int i = 1; i <= 5; i++)
             if(x % 2 == 0){
@@ -170,6 +179,24 @@ public class Main {
             }
         System.out.println("Ruta completada");
     }
+    //Ejercicio 9
+    public static void generarCodigoMision(String m){
+        if(m == null || m.trim().isEmpty()){
+            System.out.println("Mision invalido");
+            return;
+        }
+        Random rd = new Random();
+        int numeroAleatorio = rd.nextInt(100) + 1;
+        String codigoMision = m + "-" + numeroAleatorio;
+    }
+
+
+
+
+
+
+
+
 
 }
 
