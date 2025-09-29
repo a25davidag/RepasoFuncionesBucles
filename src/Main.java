@@ -71,7 +71,7 @@ public class Main {
             System.out.println("===SALIENDO DEL SISTEMA===");
         }else {
 
-            for(int i = 1; i <= numero; i++) {
+            for(int i = 0; i <= numero; i++) {
             System.out.println("Escribe un destino");
             String destino = sp.nextLine();
             System.out.println("Escribe un mensaje");
@@ -92,13 +92,10 @@ public class Main {
         Scanner sv = new Scanner(System.in);
         System.out.println(" Escribe un punto de recorrido");
         int puntoActual = sv.nextInt();
-        navegarPuntos(puntoActual);*/
+        navegarPuntos(puntoActual);
 
         //Ejercicio 9
         Scanner sh = new Scanner(System.in);
-
-        //System.out.println("Pon un numero de emisión");
-        //int numero = sh.nextInt();
         String emision;
         while (true) {
             System.out.println("Pon un nombre de emision (o escribe 'salir' para salir del sistema");
@@ -108,9 +105,16 @@ public class Main {
                 break;
             }
         }System.out.println("hola");
-        generarCodigoMision(emision);
+        generarCodigoMision(emision);*/
 
-
+        //Ejercicio 10
+        Scanner st = new Scanner(System.in);
+        int numeroPneles = st.nextInt();
+        int h;
+        for (h = 0; h < 5; h++) {
+            //System.out.println("hola");
+            desplegarPaneles(numeroPneles);
+        }
     }//Ejercicio 2
 
     public static int comprobarNivelOxigeno(int x) {
@@ -155,13 +159,13 @@ public class Main {
 
     //Ejercicio 6
     public static void mensaejesPLaneta(String d, String m) {
-            if (d.equals("marte")) {
-                System.out.println(m + " Mensaje a marte enviado, tiempo de llegada: 3 minutos");
-            } else if (d.equals("jupiter")) {
-                System.out.println(m + " Mensaje a jupiter enviado,tiempo de llegada: 25 minutos");
-            } else {
-                System.out.println(" El mensaje" + m + " NO fue enviado Destino fuera de alcance");
-            }
+        if (d.equals("marte")) {
+            System.out.println(m + " Mensaje a marte enviado, tiempo de llegada: 3 minutos");
+        } else if (d.equals("jupiter")) {
+            System.out.println(m + " Mensaje a jupiter enviado,tiempo de llegada: 25 minutos");
+        } else {
+            System.out.println(" El mensaje" + m + " NO fue enviado Destino fuera de alcance");
+        }
     }
     //Ejercicio 7
    /* public static void calcularConsumo( double r, int l){
@@ -170,36 +174,38 @@ public class Main {
 
 
     //Ejercicio 8
-    public static void navegarPuntos(int x){
-        for(int i = 1; i <= 5; i++)
-            if(x % 2 == 0){
+    public static void navegarPuntos(int x) {
+        for (int i = 1; i <= 5; i++)
+            if (x % 2 == 0) {
                 System.out.println("!Control de trayecto existoso");
-            }else{
+            } else {
                 System.out.println("!Control de trayecto no existoso");
             }
         System.out.println("Ruta completada");
     }
+
     //Ejercicio 9
-    public static void generarCodigoMision(String m){
-        if(m == null || m.trim().isEmpty()){
+    public static void generarCodigoMision(String m) {
+        if (m == null || m.trim().isEmpty()) {
             System.out.println("Mision invalido");
             return;
         }
         Random rd = new Random();
+        System.out.println("escribe un numero ");
         int numeroAleatorio = rd.nextInt(100) + 1;
         String codigoMision = m + "-" + numeroAleatorio;
     }
 
-
-
-
-
-
-
-
-
+    public static void desplegarPaneles(int h) {
+        if (h % 3 == 0) {
+            System.out.println("Panel " + h + " Desplegado con exito,calibracion automatica completada");
+            System.out.println("=====DESPLIEGUE DE PANELES SOLARES COMPLETO=====");
+            System.out.println("=====ENERGIA AL 100%=====");
+        } else {
+            System.out.println("no completado" + h);
+        }
+    }
 }
-
 
 
 
